@@ -1,0 +1,308 @@
+@font-face{
+    font-family: "bebas";
+    src: url("../fonts/BebasNeue-Regular.otf");
+}
+
+
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*base*/
+
+body{
+    background: var(--preta);
+    font-family: "bebas";
+    color: white;
+}
+
+header .container{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    /*justify-content: space-between; joga para esquerda  ou seja espacamento entre as tags filhas do container*/
+    height: 68px;
+    padding: 0px 38.46px;
+    position: relative;
+    
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'bebas';
+    font-size: 30px;
+    letter-spacing: 0.1em;
+}
+
+header nav{
+    margin-left: 30px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+    
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+
+/*FILME PRINCIPAL*/
+
+main{
+    height: 85vh;
+}
+
+
+.filme-principal{
+    font-size: 16px;
+   /* background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100px), url("../video/Trailer.mp4");*/
+    height: 95%;
+    /*background-size: cover;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; /*comeca sempre da esquerda*/
+   
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 5%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50) ;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal  .container {
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top:100px;
+    margin-bottom: -90px;
+}
+
+/*PAGINA  LOGIN*/
+
+.titulo-login{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 200;
+    margin-top: 65px;
+    margin-bottom: 10px;
+}
+
+
+.botoes-login{
+   text-align: center;
+   margin-top: 100px;
+}
+
+
+.botao-login{
+    border: 1px solid #808080;
+    background: var(--preta);
+    color: #808080;
+    padding: 5.85px 17.55px;
+    font-size: 18px;
+    width: 250px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    transition: .1s ease all;
+}
+
+.botao-login:hover{
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.contas-perfil{
+   width: 70%;
+   height: 163px;
+   margin:auto
+}
+
+.contas-perfil img{
+    width: 163px;
+    height: 163px;
+    border-radius: 5px;
+}
+
+
+.contas-perfil ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    list-style: none;    
+}
+
+
+.contas-perfil ul li{
+    padding: 0 30px 0 0;      
+}
+
+.contas-perfil ul li p{
+    text-align: center;
+    color: #808080;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+
+.contas-perfil ul li img:hover{
+    border-radius: 5px;
+    border: 5px solid #fff;      
+}
+
+.contas-perfil ul li:hover p{
+     color: #fff;  
+}
+
+
+.sessao-imagens{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Modal de Informacoes*/
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal > div {
+    width: 600px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px;
+    background:#fff;
+    border-radius: 10px;
+  }
+
+  .modal header h2{
+      color: #000;
+      font-weight: 900;
+  }
+
+  .temporada  li h4 {
+    color:  var(--vermelho);
+    font-weight: 700;
+    padding: 10px;
+  }
+
+  .temporada  li p {
+    color: #000000;
+    font-weight: 100;
+    font-size: 12px;
+  }
+
+  .fechar {
+    position: absolute;
+    width: 30px;
+    right: -10px;
+    top: -10px;
+    text-align: center;
+    line-height: 30px;
+    margin: auto;
+    background: var(--vermelho);
+    border-radius: 50%;
+     color: #fff;
+  }
+
+  .temporada{
+      margin-top: 10px;
+      list-style: none;   
+  }
+
+  /*PAGINA DE VIDEO*/
+  .video{
+      width: 100%;
+      height: 500px;
+      text-align: center;
+     
+  }
+
+  .video > video {
+      width:  70%;
+  }
+
+ 
+     
+#video-fundo{
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.subtitulos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 0px  0px 10px 10px;
+    
+    
+}
